@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>To-Do app</title>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="nav-bar">
+    <div class="barra">
+      <ul class="items">
+        <a href="../../index.html">Inicio</a>
+        <li>Sobre Mi</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="contenedor">
+    <div class="buscador">
+      <label for="tarea" id="ta">Nombre de la tarea</label>
+      <input type="text" id="tarea"><br>
+      <label for="categoria" id="ca">Categoria</label>
+      <select name="categoria" id="categoria">
+        <option value="Laboral">Laboral</option>
+        <option value="Personal">Personal</option>
+        <option value="Hogar">Hogar</option>
+        <option value="Hogar">Hogar</option>
+        <option value="Ocio">Ocio</option>
+        <option value="Financieras">Financieras</option>
+        <option value="Desarrollo">Desarrollo</option>
+      </select><br>
+      <button onclick="agregarTarea()">Agregar</button>
+    </div>
+    <div class="filtro">
+      <button> Finalizadas </button>
+      <button> Sin finalizar </button>
+      <button> Destacadas </button>
+      <select name="selector" id="selector">
+        <option value="Laboral">Laboral</option>
+        <option value="Personal">Personal</option>
+        <option value="Hogar">Hogar</option>
+        <option value="Hogar">Hogar</option>
+        <option value="Ocio">Ocio</option>
+        <option value="Financieras">Financieras</option>
+        <option value="Desarrollo">Desarrollo</option>
+      </select>
+    </div>
+    <div class="listado">
+      
+    </div>
+  </div>
+</body>
+</html>
