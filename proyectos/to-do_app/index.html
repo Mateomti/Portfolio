@@ -24,21 +24,19 @@
         <option value="Laboral">Laboral</option>
         <option value="Personal">Personal</option>
         <option value="Hogar">Hogar</option>
-        <option value="Hogar">Hogar</option>
         <option value="Ocio">Ocio</option>
         <option value="Financieras">Financieras</option>
         <option value="Desarrollo">Desarrollo</option>
       </select><br>
-      <button onclick="agregarTarea()">Agregar</button>
+      <button onclick="agregarTarea()" id="agregar">Agregar</button>
     </div>
     <div class="filtro">
-      <button> Finalizadas </button>
-      <button> Sin finalizar </button>
-      <button> Destacadas </button>
-      <select name="selector" id="selector">
+      <button class="filtro-destacadas">Ver solo destacadas</button>
+      <button class="filtro-finalizadas">Ver solo finalizadas</button>
+      <button class="filtro-todas">Mostrar todas</button>
+      <select name="selector" id="filtro-categoria">
         <option value="Laboral">Laboral</option>
         <option value="Personal">Personal</option>
-        <option value="Hogar">Hogar</option>
         <option value="Hogar">Hogar</option>
         <option value="Ocio">Ocio</option>
         <option value="Financieras">Financieras</option>

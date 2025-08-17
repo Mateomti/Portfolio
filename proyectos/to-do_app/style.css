@@ -63,7 +63,22 @@ body{
   background-color: #191716;
   place-content: center;
   text-align: left;
-  overflow-y: auto; 
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+}
+#tarea {
+  padding: 10px;
+  border-radius: 15px;
+}
+#categoria {
+  padding: 10px;
+  border-radius: 15px;
+}
+#agregar {
+padding: 10px;
+  border-radius: 15px;
 }
 .filtro {
   grid-column: 1;
@@ -92,10 +107,29 @@ body{
   font-size:large;
   padding: 10px;
   border-bottom: 1px solid #ccc;
-  margin: auto;
 }
-.boton {
+.boton-eliminar {
   grid-row: 2;
   display: none;
   margin-left: 5px;
+}
+.boton-finalizar {
+  grid-row: 2;
+  display: none;
+  margin-left: 5px;
+}
+.boton-destacar {
+  grid-row: 2;
+  display: none;
+  margin-left: 5px;
+}
+.finalizada {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+.destacada {
+    color: yellow;
+}
+.finalizadas {
+    display: none;
 }
