@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>App del Clima</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card1">
+    <h2>🌤️ App del Clima</h2>
+    <input type="text" id="lat" placeholder="Ingrese la latitud de su ciudad">
+    <input type="text" id="lon" placeholder="Ingrese la longitud">
+    <button onclick="getWeather1()">Buscar</button>
+    <button onclick="cambiarCuadro1()">Buscar por nombre</button>
+    <div id="weatherResult1"></div>
+  </div>
+  <div class="card2">
+    <h2>🌤️ App del Clima</h2>
+    <input type="text" id="nombre" placeholder="Ingrese el nombre de la ciudad...">
+    <button onclick="getWeather2()">Buscar</button>
+    <button onclick="cambiarCuadro2()">Buscar por coordenadas</button>
+    <div id="weatherResult2"></div>
+  </div>
+  <a href="/index.html">Volver</a>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
