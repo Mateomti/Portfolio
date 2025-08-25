@@ -10,7 +10,7 @@ async function getWeather1() {
     return;
   }
 
-  const url = `http://api.openweathermap.org/data/2.5/weather?lon=${lon}&lat=${lat}&APPID=c57bfc57e06d088a9c68212a93578ea7`;
+  const url = `http://api.openweathermap.org/data/2.5/weather?lon=${lon}&lat=${lat}&units=metric&APPID=c57bfc57e06d088a9c68212a93578ea7`;
   console.log(url);
 
   try {
@@ -18,12 +18,13 @@ async function getWeather1() {
     if (!response.ok) throw new Error("Ciudad no encontrada");
     const data = await response.json();
 
-    const { name, main, weather } = data;
+    const { name, main, weather, sys } = data;
     resultDiv.innerHTML = `
       <h3>${name}</h3>
       <p>🌡️ Temp: ${main.temp}°C</p>
       <p>🤔 Sensación: ${main.feels_like}°C</p>
       <p>💧 Humedad: ${main.humidity}%</p>
+      <p> Pais: ${sys.country}</p>
       <p>${weather[0].description}</p>
     `;
   } catch (error) {
@@ -39,7 +40,7 @@ async function getWeather2() {
     return;
   }
 
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${nombre}&APPID=c57bfc57e06d088a9c68212a93578ea7`;
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${nombre}&units=metric&APPID=c57bfc57e06d088a9c68212a93578ea7`;
   console.log(url);
 
   try {
@@ -47,12 +48,13 @@ async function getWeather2() {
     if (!response.ok) throw new Error("Ciudad no encontrada");
     const data = await response.json();
 
-    const { name, main, weather } = data;
+    const { name, main, weather, sys } = data;
     resultDiv.innerHTML = `
       <h3>${name}</h3>
       <p>🌡️ Temp: ${main.temp}°C</p>
       <p>🤔 Sensación: ${main.feels_like}°C</p>
       <p>💧 Humedad: ${main.humidity}%</p>
+      <p> Pais: ${sys.country}</p>
       <p>${weather[0].description}</p>
     `;
   } catch (error) {
@@ -73,5 +75,9 @@ async function cambiarCuadro2 (){
   console.log(cuadro1);
   cuadro2.style.display = "none";
   cuadro1.style.display = "block";
+}
+
+function temp(temperatura){
+
 }
 
